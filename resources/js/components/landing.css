@@ -1,0 +1,268 @@
+:root {
+    --themed: rgba(255, 255, 255, 0.2);
+    --bg: linear-gradient(45deg, #93f9b9, #1d976c);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.App {
+    flex: 1;
+    height: 100vh;
+    background-image: url("../Assets/lbg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*.line{
+	height: inherit;
+	width: 40vw;
+	background-image: url("./Assets/line.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}*/
+.header {
+    height: 10vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.header .link {
+    text-decoration: none;
+    color: black;
+}
+.header h1 {
+    color: white;
+    position: relative;
+    top: 10px;
+    left: 18px;
+    width: 100px;
+    font-family: "Trebuchet ms";
+}
+h1 span {
+    color: var(--themed);
+}
+.header h1::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 60%;
+    background-color: var(--themed);
+    bottom: -2px;
+    left: 0;
+}
+.header nav {
+    position: absolute;
+    top: 100%;
+    padding-left: 1.2em;
+    display: none;
+}
+.header ul {
+    list-style: none;
+}
+.cov_cont {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.active {
+    color: white;
+}
+.password_link {
+    color: blue;
+    text-decoration: none;
+    position: fixed;
+    margin: 38px 0;
+}
+.nav1 li {
+    margin-bottom: 5px;
+    color: white;
+}
+.nav2 {
+    margin-top: 1.2em;
+}
+.nav2 li {
+    margin: 8px 0;
+}
+.signup {
+    background-color: var(--themed);
+    color: black;
+    border-radius: 20px;
+    padding-top: -5px;
+}
+/*.clipart{
+	width: 50vw;
+	height: 70vh;
+	background-image: url("./Assets/clipart.png");
+	background-size: contain; 
+	background-repeat: no-repeat;
+	background-position: right;
+	position:  absolute; 
+	top:  14vh;
+	right: 0; 
+}*/
+.login_form {
+    width: 80%;
+    height: 80vh;
+    background-color: var(--themed);
+    position: fixed;
+    top: 12vh;
+    left: 1.2em;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+}
+.login_avatar {
+    width: 94px;
+    height: 94px;
+    background-image: url("./Assets/avatar.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+    margin-top: 12vh;
+    border: 4px solid white;
+}
+.login_form form {
+    width: 90%;
+    position: absolute;
+    top: 30vh;
+    height: 40vh;
+}
+.login_form form input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px 0 10px 1.2em;
+    margin: 8px 0;
+    border-radius: 25px;
+    border: transparent;
+    outline: 0;
+}
+.login_form form input[type="checkbox"] {
+    position: absolute;
+    left: 0.7em;
+    width: 18px;
+    height: 18px;
+    margin-top: 10px;
+}
+.login_form form input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: transparent;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    margin-top: 25px;
+    position: absolute;
+    left: 0.7em;
+}
+.login_form .signup_link {
+    position: absolute;
+    left: 0.7em;
+    margin-top: 5em;
+    text-decoration: none;
+    color: blue;
+}
+.login_form p {
+    position: absolute;
+    margin: 9px 30px;
+}
+@media screen and (min-width: 800px) {
+    .header {
+        display: grid;
+        grid-template-columns: 20vw 80vw;
+    }
+    .header h1::after {
+        bottom: 20px;
+    }
+    .header nav {
+        all: unset;
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 60vw 20vw;
+    }
+    nav ul {
+        display: flex;
+    }
+    .nav1 {
+        grid-column: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav1 li {
+        margin: 0 1.2em;
+        cursor: pointer;
+    }
+    .nav2 {
+        margin-top: 5px;
+        grid-column: 2/3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav2 li {
+        margin: 0 8px;
+        padding: 5px 12px;
+        cursor: pointer;
+    }
+    .App button {
+        position: absolute;
+        top: 50vh;
+        left: 45vw;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 2px solid var(--themed);
+        background: transparent;
+        outline: 0;
+    }
+    .login_form {
+        width: 30vw;
+    }
+    .login_form {
+        position: fixed;
+        top: 12vh;
+        left: 1.2em;
+        display: flex;
+        justify-content: center;
+        border-radius: 6px;
+    }
+    .login_avatar {
+        width: 94px;
+        height: 94px;
+        border-radius: 50%;
+        margin-top: 12vh;
+        border: 4px solid white;
+    }
+    .login_form form {
+        width: 20vw;
+        position: absolute;
+        top: 30vh;
+        height: 40vh;
+    }
+}
+@media screen and (max-height: 440px) {
+    .App {
+        height: 140vh;
+    }
+    .login_form {
+        margin: 30px;
+        height: 380px;
+        position: absolute;
+    }
+    .login_avatar {
+        width: 64px;
+        height: 64px;
+        margin-top: 12px;
+    }
+    .password_link {
+        position: absolute;
+    }
+    .clipart {
+        display: none;
+    }
+}
+@media screen and (max-height: 200px) {
+    .App {
+        display: none;
+    }
+}
